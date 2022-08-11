@@ -1,0 +1,458 @@
+/*estilos home*/
+* {
+  padding: 3px;
+  margin: 5px;
+  box-sizing: border-box; }
+
+/*agregando variables */
+.TitleTemplate, body .carritoMain {
+  background-color: grey;
+  padding: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: lighter;
+  gap: 50px;
+  font-display: inherit; }
+
+body .headerHome {
+  display: grid;
+  grid-template-columns: 7fr;
+  grid-template-rows: 2.5fr;
+  grid-template-areas: " headerHome ";
+  background-color: grey;
+  grid-area: headerhome;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  body .headerHome .piePagina {
+    background-color: orangered;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none; }
+  body .headerHome h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    border: 10px solid #060505;
+    justify-content: center; }
+  body .headerHome p {
+    text-align: center; }
+  body .headerHome .navEventos {
+    font-weight: bold;
+    background-color: orange; }
+
+body .seccionCentral {
+  display: grid;
+  grid-template-columns: 3.5fr 3.5fr;
+  grid-template-rows: 3.5fr;
+  grid-template-areas: " divSeccion sectionRutini ";
+  background-color: orange;
+  grid-area: seccionCentral;
+  font-weight: bold; }
+  body .seccionCentral h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  body .seccionCentral p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  body .seccionCentral section {
+    display: flex;
+    background-color: orangered; }
+  body .seccionCentral .imagenRutini {
+    animation-name: imagenRutini;
+    animation-iteration-count: infinite;
+    animation-duration: 5s; }
+
+@keyframes imagenRutini {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(0.5); } }
+  body .seccionCentral .sectionRutini {
+    grid-area: sectionRutini;
+    align-items: center;
+    justify-content: center;
+    display: block; }
+
+body .footerHome {
+  display: grid;
+  grid-template-columns: 7fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: " footerHome ";
+  background-color: grey;
+  text-align: center;
+  grid-area: footer;
+  font-weight: bold; }
+  body .footerHome a {
+    text-decoration: none;
+    color: black;
+    font-size: bold; }
+
+@media screen and (max-width: 600px) {
+  body .contendorHome .headerHome {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 2.5fr;
+    grid-template-areas: " headerHome "; }
+  body .contendorHome .seccionCentral {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 3.5fr 3.5fr;
+    grid-template-areas: " divSeccion" "sectionRutini"; }
+  body .contendorHome .footerHome {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: " footerHome "; }
+  body .headerHome {
+    background-color: orange; }
+  body .menu {
+    background-color: black; } }
+
+@media screen and (max-width: 399px) {
+  body .sectionRutini {
+    display: none; }
+  body .contendorHome .seccionCentral {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 3.5fr;
+    grid-template-areas: " divSeccion"; } }
+
+/*estilos ubicacion*/
+body header {
+  grid-area: headerUbi;
+  background-color: grey; }
+  body header .absolutImagen {
+    text-align: center; }
+  body header .ubicacionTitulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    border: 10px solid #060505;
+    justify-content: center; }
+  body header .navUbicacion {
+    background-color: orange;
+    border: 10px solid black;
+    font-weight: bold; }
+
+body main {
+  background-color: orange;
+  font-weight: bold; }
+  body main .cartasUbi {
+    background-color: grey;
+    text-align: center; }
+    body main .cartasUbi .card-body {
+      background-color: grey; }
+
+@media screen and (max-width: 600px) {
+  body .contendorUbicacion {
+    background-color: black; } }
+
+@media screen and (max-width: 399px) {
+  body .contendorUbicacion {
+    background-color: whitesmoke; } }
+
+/*estilos productos*/
+body div .headerProducto {
+  display: grid;
+  grid-template-columns: 7fr;
+  grid-template-rows: 7fr;
+  grid-template-areas: " headerProducto ";
+  grid-area: headerProducto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: grey; }
+  body div .headerProducto .productosTitulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    border: 10px solid #060505;
+    justify-content: center; }
+  body div .headerProducto .aperitivosProductos {
+    text-align: center; }
+  body div .headerProducto .imagenAperitivos {
+    animation-name: imagenAperitivos;
+    animation-iteration-count: infinite;
+    animation-duration: 5s; }
+
+@keyframes imagenAperitivos {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(0.7); } }
+
+body div .mainProductos {
+  display: grid;
+  grid-template-columns: 7fr;
+  grid-template-rows: 1fr 1fr 2.5fr;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: "tablaProductos"  "fernetProductosTitulo" "contenedorMultimedia "; }
+  body div .mainProductos .tablaAlinerar {
+    text-align: center;
+    table-layout: none;
+    font-weight: bold; }
+  body div .mainProductos .tablaProductos {
+    grid-area: tablaProductos; }
+  body div .mainProductos .tablaProductos td {
+    font-size: 2.5vw; }
+  body div .mainProductos .tablaProductos {
+    background-color: goldenrod;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    margin-bottom: 0px;
+    font-weight: bold; }
+  body div .mainProductos .fernetProductosTitulo:hover {
+    transform: scale(3);
+    transform: translate(20px, 40px);
+    background-image: linear-gradient(to left, white, right); }
+  body div .mainProductos .fernetProductosTitulo {
+    background-color: grey;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    margin-top: 5px; }
+  body div .mainProductos .contenedorProductosImg {
+    text-align: center;
+    grid-area: contenedorProductosImg; }
+  body div .mainProductos .contenedorMultimedia {
+    grid-area: contenedorMultimedia;
+    width: 100%; }
+
+body div .footerProductos {
+  display: grid;
+  grid-template-columns: 7fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "footerProductos";
+  grid-area: footerProductos;
+  background-color: grey; }
+
+@media screen and (max-width: 600px) {
+  body .contendorProductos {
+    background-color: burlywood; }
+  body .contenedorMultimedia {
+    display: none; }
+  body .contendorProductos .mainProductos {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 2.25fr 2.25fr;
+    grid-template-areas: "tablaProductos"  "fernetProductosTitulo"; } }
+
+@media screen and (max-width: 399px) {
+  body .contenedorProductos {
+    background-color: orange; } }
+
+/*estilos eventos*/
+body .headerEventos {
+  background-color: grey;
+  display: flex;
+  flex-direction: column; }
+  body .headerEventos .eventosTitulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    border: 10px solid #060505;
+    justify-content: center; }
+  body .headerEventos .navEventos {
+    background-color: orange;
+    font-weight: bold;
+    border: 10px solid black; }
+
+body .conteiner-fluid {
+  background-color: orange;
+  padding: 100px; }
+
+body footer {
+  background-color: grey;
+  text-align: center; }
+
+@media screen and (max-width: 600px) {
+  body .contedorEventos {
+    background-color: grey; } }
+
+@media screen and (max-width: 399px) {
+  body .contedorEventos {
+    background-color: whitesmoke; } }
+
+/*estilos carrito compra*/
+body header {
+  display: flex;
+  flex-direction: column; }
+  body header .carritoImg {
+    align-items: center; }
+  body header .carritoTitulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    border: 10px solid #060505;
+    justify-content: center; }
+  body header .navCarrito {
+    border: 10px solid black;
+    font-weight: bold;
+    background-color: orange; }
+  body header .listaCarrito {
+    background-color: black;
+    color: whitesmoke;
+    list-style: none;
+    text-decoration: none;
+    font-size: bold; }
+
+body .carritoMain .tituloDos {
+  font-weight: bold; }
+
+body .carritoMain h3 {
+  font-size: 30px;
+  font-weight: bold; }
+
+body .carritoMain .compra {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-top: 1px; }
+
+body .carritoMain .button {
+  align-self: center;
+  justify-content: center;
+  text-align: center; }
+
+body .carritoMain .gridm {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px, 400px, 400px, 400px;
+  grid-template-areas: "hijom1" "hijom2" "hijom3"; }
+
+body .carritoMain .carritoUnos {
+  display: flex;
+  flex-direction: row;
+  justify-self: center; }
+
+body .carritoMain .carritoDos {
+  display: flex;
+  flex-direction: row;
+  justify-self: center; }
+
+body .carritoMain .carritoTres {
+  display: flex;
+  flex-direction: row;
+  justify-self: center; }
+
+body .carritoMain .hijom1 {
+  background-color: orange;
+  font-size: 25px; }
+
+body .carritoMain .hijom2 a {
+  font-weight: bold;
+  gap: 5px;
+  margin: 20px;
+  border-radius: 10%;
+  background-color: whitesmoke;
+  text-shadow: 2px  black;
+  font-size: 20px; }
+
+body .carritoMain .hijom3 a {
+  font-weight: bold;
+  margin: 20px;
+  border-radius: 10%;
+  background-color: whitesmoke;
+  text-shadow: 2px  black;
+  font-size: 20px; }
+
+body .carritoMain .hijom4 a {
+  font-weight: bold;
+  margin: 20px;
+  border-radius: 10%;
+  background-color: whitesmoke;
+  text-shadow: 2px  black;
+  font-size: 20px; }
+
+@media screen and (max-width: 600px) {
+  body .contenedorCarrito {
+    background-color: grey; }
+  body .materiales .carritoUnos {
+    display: flex;
+    flex-direction: column;
+    justify-self: center; }
+  body .materiales .carritoDos {
+    display: flex;
+    flex-direction: column;
+    justify-self: center; }
+  body .materiales .carritoTres {
+    display: flex;
+    flex-direction: column;
+    justify-self: center; } }
+
+@media screen and (max-width: 399px) {
+  body .materiales {
+    background-color: whitesmoke; } }
+
+/*estilos contacto*/
+.bodyContacto {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 0.3fr 1.6fr 0.1fr;
+  grid-template-areas: "headerContacto" "mainContacto" "footerContacto"; }
+  .bodyContacto .headerContacto {
+    grid-area: headerContacto;
+    text-align: center;
+    display: flex; }
+    .bodyContacto .headerContacto .contactosTitulo {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 4vw;
+      border: 10px solid #060505;
+      justify-content: center; }
+    .bodyContacto .headerContacto .navContacto {
+      justify-content: center;
+      border: 10px solid black;
+      font-weight: bold;
+      background-color: orange; }
+  .bodyContacto .mainContacto {
+    grid-area: mainContacto; }
+    .bodyContacto .mainContacto .tablaColor {
+      background-color: grey;
+      text-align: center;
+      border: 3px solid burlywood;
+      text-shadow: 1px black;
+      margin-top: 0px; }
+    .bodyContacto .mainContacto .card-group {
+      background-color: orange;
+      grid-area: card-group; }
+  .bodyContacto .footerContacto {
+    grid-area: footerContacto;
+    background-color: grey;
+    text-align: center; }
+
+@media screen and (max-width: 600px) {
+  .bodyContacto {
+    background-color: grey; }
+  .card-group {
+    display: none; } }
+
+@media screen and (max-width: 399px) {
+  .bodyContacto {
+    background-color: whitesmoke; }
+  .contactosTitulo {
+    font-size: small;
+    font-weight: bold;
+    color: grey; } }
